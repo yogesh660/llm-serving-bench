@@ -89,21 +89,17 @@ fake results.
 
 ### M1 - Single-GPU benchmarks
 E1-E4 on one rented GPU (Modal or a cloud VM), results to parquet and MLflow, first dashboard.
-**Shows:** inference engineering basics, done properly
 
 ### M2 - Kubernetes manifests
 Helm chart for vLLM + Prometheus + Grafana + KEDA, tested on kind (CPU, small model or
 simulator) in CI.
-**Shows:** GPU-ready Kubernetes packaging without paying for GPUs while developing
 
 ### M3 - llm-d on real GPUs
 A short, planned session on a 2-GPU Kubernetes cluster (rented by the hour): E5-E7,
 dashboards captured, cluster deleted afterwards.
-**Shows:** distributed inference with current tooling
 
 ### M4 - Recommendations and write-up
 Decision table per traffic pattern, cost model, blog-style write-up on the website.
-**Shows:** turning measurements into decisions
 
 ### M5 - Live endpoint
 Best single-GPU configuration as a scale-to-zero endpoint on Modal; the website page lets a
@@ -150,9 +146,3 @@ CLAUDE.md  Makefile  docs/adr/
   provider and price with each result.
 - llm-d is young and moves fast. Mitigation: pin versions; note them in every result.
 - Benchmarks that flatter one setup. Mitigation: publish workload files and raw results.
-
-## Interview talking points
-
-- Why TTFT and throughput at a latency target matter more than raw tokens/s.
-- When speculative decoding helped and when it hurt.
-- What prefix-aware routing changed for RAG traffic, with numbers.
